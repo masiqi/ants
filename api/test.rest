@@ -1,0 +1,31 @@
+### 语义搜索
+GET http://localhost:8787/v1/services/poems/search?q=思乡之情&limit=5
+
+### 主题搜索
+GET http://localhost:8787/v1/services/poems/theme/思乡
+
+### 场景搜索
+GET http://localhost:8787/v1/services/poems/scenario/送别
+
+### 管理搜索
+POST http://localhost:8787/v1/admin/poems/search
+Content-Type: application/json
+
+{
+  "query": "思乡",
+  "options": {
+    "limit": 5
+  },
+  "debug": true
+}
+
+### MCP 搜索
+POST http://localhost:8787/v1/mcp/poems/search
+Content-Type: application/json
+
+{
+  "query": "思乡",
+  "parameters": {
+    "limit": 5
+  }
+} 
